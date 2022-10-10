@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void Siguiente(View view) {
-        Intent Siguiente= new Intent(this, preguntas.class);
+        Intent Siguiente= new Intent(this, P1.class);
         startActivity(Siguiente);
         setContentView(R.layout.activity_main);
     }

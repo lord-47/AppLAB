@@ -8,15 +8,15 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.RadioButton;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class preguntas extends AppCompatActivity implements AdapterView.OnItemClickListener {
+public class P1 extends AppCompatActivity implements AdapterView.OnItemClickListener {
     ListView list;
     List<String> respuestas;
+    boolean Contestado=false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,18 +31,26 @@ public class preguntas extends AppCompatActivity implements AdapterView.OnItemCl
         list.setOnItemClickListener(this);
     }
     public void Volver(View view) {
-        Intent Volver = new Intent(this, MainActivity.class);
-        startActivity(Volver);
+        if (Contestado) {
+            Intent Volver = new Intent(this, P2.class);
+            startActivity(Volver);
+        }
+        else {
+            Toast.makeText(this, "No has contestado", Toast.LENGTH_LONG).show();
+        }
     }
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         String respuesta = respuestas.get(i);
-        if (respuesta == "Si") {
-            Toast.makeText(this, "respuesta Correcta ;)", Toast.LENGTH_LONG).show();
-        }
-        else{
-            Toast.makeText(this, "respuesta incorrecta :(", Toast.LENGTH_LONG).show();
+        if (!Contestado) {
+            if (respuesta == "Si") {
+                Toast.makeText(this, "respuesta Correcta ;)", Toast.LENGTH_LONG).show();
+                Contestado=true;
+            } else {
+                Toast.makeText(this, "respuesta incorrecta :(", Toast.LENGTH_LONG).show();
+                Contestado=true;
+            }
         }
 
     }
