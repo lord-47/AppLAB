@@ -32,7 +32,7 @@ public class P3 extends AppCompatActivity {
 
     public void Siguiente(View view) {
         if (Contestado) {
-            Intent Volver = new Intent(this, P1.class);
+            Intent Volver = new Intent(this, P4.class);
             startActivity(Volver);
         }
         else {
