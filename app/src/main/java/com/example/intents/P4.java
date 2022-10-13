@@ -12,37 +12,48 @@ import android.widget.Toast;
 
 public class P4 extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     boolean Contestado=false ;
-    String[] respuesta={"si","no","puede"};
+    Spinner spinner;
+    String[] respuesta={"sin contestar","si","no","puede"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_p4);
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
-        Spinner spinner1 = (Spinner) findViewById(R.id.spinner2);
-        Spinner spinner2 = (Spinner) findViewById(R.id.spinner3);
+        spinner = (Spinner) findViewById(R.id.spinner);
+        spinner.setOnItemSelectedListener(this);
         ArrayAdapter aa = new ArrayAdapter(this,android.R.layout.simple_spinner_item,respuesta);
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(aa);
-        spinner1.setAdapter(aa);
-        spinner2.setAdapter(aa);
     }
 
 
 
     public void Siguiente(View view) {
-        if (Contestado) {
-            Intent Volver = new Intent(this, P1.class);
+        if (spinner.getSelectedItem().toString()=="si") {
+            Toast.makeText(this, "correcto", Toast.LENGTH_LONG).show();
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            Intent Volver = new Intent(this, P5.class);
             startActivity(Volver);
         }
-        else {
-            Toast.makeText(this, "No has contestado", Toast.LENGTH_LONG).show();
+        else{
+            Toast.makeText(this, "incorrecto", Toast.LENGTH_LONG).show();
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            Intent Volver = new Intent(this, P5.class);
+            startActivity(Volver);
         }
+
     }
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        Toast.makeText(getApplicationContext(),respuesta[i] , Toast.LENGTH_LONG).show();
     }
 
     @Override

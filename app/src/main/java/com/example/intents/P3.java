@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class P3 extends AppCompatActivity {
@@ -18,7 +19,7 @@ public class P3 extends AppCompatActivity {
     }
 
     public void respuesta(View view) {
-        boolean pulsado = ((Button) view ).isClickable();
+        boolean pulsado = ((ImageView) view ).isClickable();
         if(! Contestado && pulsado) {
             if (view.getId() == R.id.imageButton2) {
                 Toast.makeText(this, "Correcto", Toast.LENGTH_SHORT).show();
