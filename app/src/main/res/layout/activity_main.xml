@@ -10,8 +10,8 @@
         android:id="@+id/button"
         android:layout_width="191dp"
         android:layout_height="57dp"
-        android:layout_marginStart="116dp"
-        android:layout_marginBottom="160dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginBottom="192dp"
         android:onClick="Siguiente"
         android:text="Comienza"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -19,10 +19,32 @@
 
     <ImageView
         android:id="@+id/Imagen"
-        android:layout_width="188dp"
-        android:layout_height="434dp"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="76dp"
+        android:layout_width="163dp"
+        android:layout_height="371dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pngwing_com" />
+
+    <ImageView
+        android:id="@+id/imagen"
+        android:layout_width="111dp"
+        android:layout_height="294dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="188dp"
+        android:rotation="-20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pngwing_com" />
+
+    <ImageView
+        android:id="@+id/imagen2"
+        android:layout_width="111dp"
+        android:layout_height="294dp"
+        android:layout_marginStart="248dp"
+        android:layout_marginTop="188dp"
+        android:rotation="20"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/pngwing_com" />

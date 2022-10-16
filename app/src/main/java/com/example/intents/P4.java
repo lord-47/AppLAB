@@ -13,7 +13,7 @@ import android.widget.Toast;
 public class P4 extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     boolean Contestado=false ;
     Spinner spinner;
-    String[] respuesta={"sin contestar","si","no","puede"};
+    String[] respuesta={"...","Marilyn Monroe","Audrey Hepburn","Elizabeth Taylor","Judy Garland"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,10 +29,10 @@ public class P4 extends AppCompatActivity implements AdapterView.OnItemSelectedL
 
 
     public void Siguiente(View view) {
-        if (spinner.getSelectedItem().toString()=="si") {
-            Toast.makeText(this, "correcto", Toast.LENGTH_LONG).show();
+        if (spinner.getSelectedItem().toString()=="Audrey Hepburn") {
+            Toast.makeText(this, "Correcto", Toast.LENGTH_LONG).show();
             try {
-                Thread.sleep(3000);
+                Thread.sleep(1500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -40,9 +40,9 @@ public class P4 extends AppCompatActivity implements AdapterView.OnItemSelectedL
             startActivity(Volver);
         }
         else{
-            Toast.makeText(this, "incorrecto", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Incorrecto", Toast.LENGTH_LONG).show();
             try {
-                Thread.sleep(3000);
+                Thread.sleep(1500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

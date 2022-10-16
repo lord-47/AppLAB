@@ -21,12 +21,12 @@ public class P3 extends AppCompatActivity {
     public void respuesta(View view) {
         boolean pulsado = ((ImageView) view ).isClickable();
         if(! Contestado && pulsado) {
-            if (view.getId() == R.id.imageButton2) {
+            if (view.getId() == R.id.imageButton3) {
                 Toast.makeText(this, "Correcto", Toast.LENGTH_SHORT).show();
                 Contestado = true;
             } else {
                 Contestado = true;
-                Toast.makeText(this, "Iicorrecto", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
             }
         }
     }

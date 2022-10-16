@@ -23,9 +23,9 @@ public class P1 extends AppCompatActivity implements AdapterView.OnItemClickList
         setContentView(R.layout.activity_2);
         list = findViewById(R.id.lista);
         respuestas = new ArrayList<>();
-        respuestas.add("SI");
-        respuestas.add("NO");
-        respuestas.add("Puede");
+        respuestas.add("The Riddle");
+        respuestas.add("Bane");
+        respuestas.add("Joker");
         ArrayAdapter adapterresp = new ArrayAdapter(this, android.R.layout.simple_list_item_1,respuestas);
         list.setAdapter(adapterresp);
         list.setOnItemClickListener(this);
@@ -44,11 +44,11 @@ public class P1 extends AppCompatActivity implements AdapterView.OnItemClickList
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         String respuesta = respuestas.get(i);
         if (!Contestado) {
-            if (respuesta == "Si") {
-                Toast.makeText(this, "respuesta Correcta ;)", Toast.LENGTH_LONG).show();
+            if (respuesta == "The Riddle") {
+                Toast.makeText(this, "Respuesta correcta ;)", Toast.LENGTH_LONG).show();
                 Contestado=true;
             } else {
-                Toast.makeText(this, "respuesta incorrecta :(", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Respuesta incorrecta :(", Toast.LENGTH_LONG).show();
                 Contestado=true;
             }
         }
