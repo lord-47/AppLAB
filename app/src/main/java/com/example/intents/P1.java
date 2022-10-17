@@ -17,6 +17,7 @@ public class P1 extends AppCompatActivity implements AdapterView.OnItemClickList
     ListView list;
     List<String> respuestas;
     boolean Contestado=false;
+    int contador=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +34,7 @@ public class P1 extends AppCompatActivity implements AdapterView.OnItemClickList
     public void Volver(View view) {
         if (Contestado) {
             Intent Volver = new Intent(this, P2.class);
+            Volver.putExtra("puntuacion", contador);
             startActivity(Volver);
         }
         else {
@@ -46,9 +48,11 @@ public class P1 extends AppCompatActivity implements AdapterView.OnItemClickList
         if (!Contestado) {
             if (respuesta == "The Riddle") {
                 Toast.makeText(this, "Respuesta correcta ;)", Toast.LENGTH_LONG).show();
+                contador=contador+3;
                 Contestado=true;
             } else {
                 Toast.makeText(this, "Respuesta incorrecta :(", Toast.LENGTH_LONG).show();
+                contador=contador-1;
                 Contestado=true;
             }
         }

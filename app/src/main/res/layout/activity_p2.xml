@@ -42,7 +42,7 @@
             android:id="@+id/op_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="respuesta"
+            android:onClick="Respuesta"
             android:text="resiliencia"
             android:textColorHighlight="#673AB7"
             android:textColorLink="#673AB7" />
@@ -54,12 +54,13 @@
             android:text="ira"
             android:textColorHighlight="#673AB7"
             android:textColorLink="#673AB7"
-            tools:onClick="respuesta" />
+            android:onClick="Respuesta" />
 
         <RadioButton
             android:id="@+id/op_3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="Respuesta"
             android:text="esperanza"
             android:textColorHighlight="#673AB7"
             android:textColorLink="#673AB7" />
@@ -68,6 +69,7 @@
             android:id="@+id/op_4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="Respuesta"
             android:text="suerte"
             android:textColorHighlight="#673AB7"
             android:textColorLink="#673AB7" />

@@ -14,6 +14,7 @@ public class P4 extends AppCompatActivity implements AdapterView.OnItemSelectedL
     boolean Contestado=false ;
     Spinner spinner;
     String[] respuesta={"...","Marilyn Monroe","Audrey Hepburn","Elizabeth Taylor","Judy Garland"};
+    int contador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,7 @@ public class P4 extends AppCompatActivity implements AdapterView.OnItemSelectedL
         ArrayAdapter aa = new ArrayAdapter(this,android.R.layout.simple_spinner_item,respuesta);
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(aa);
+        contador= getIntent().getIntExtra("puntuacion",0);
     }
 
 
@@ -31,6 +33,7 @@ public class P4 extends AppCompatActivity implements AdapterView.OnItemSelectedL
     public void Siguiente(View view) {
         if (spinner.getSelectedItem().toString()=="Audrey Hepburn") {
             Toast.makeText(this, "Correcto", Toast.LENGTH_LONG).show();
+            contador =contador+3;
             try {
                 Thread.sleep(1500);
             } catch (InterruptedException e) {
@@ -41,12 +44,14 @@ public class P4 extends AppCompatActivity implements AdapterView.OnItemSelectedL
         }
         else{
             Toast.makeText(this, "Incorrecto", Toast.LENGTH_LONG).show();
+            contador =contador-1;
             try {
                 Thread.sleep(1500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             Intent Volver = new Intent(this, P5.class);
+            Volver.putExtra("puntuacion", contador);
             startActivity(Volver);
         }
 

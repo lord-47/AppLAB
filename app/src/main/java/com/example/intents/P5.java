@@ -10,10 +10,12 @@ import android.widget.Toast;
 
 public class P5 extends AppCompatActivity {
     Boolean Contestado = false;
+    int contador;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_p5);
+        contador= getIntent().getIntExtra("puntuacion",0);
     }
 
     public void respuesta(View view) {
@@ -21,9 +23,12 @@ public class P5 extends AppCompatActivity {
         if(! Contestado && pulsado) {
             if (view.getId() == R.id.op_1) {
                 Toast.makeText(this, "Correcto", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, contador, Toast.LENGTH_SHORT).show();
+                contador =contador+3;
                 Contestado = true;
             } else {
                 Contestado = true;
+                contador =contador-1;
                 Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
             }
         }
@@ -32,6 +37,7 @@ public class P5 extends AppCompatActivity {
     public void Siguiente(View view) {
         if (Contestado) {
             Intent Volver = new Intent(this, Resultado.class);
+            Volver.putExtra("puntuacion", "contador");
             startActivity(Volver);
         }
         else {
