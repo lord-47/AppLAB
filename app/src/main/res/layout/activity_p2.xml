@@ -8,11 +8,13 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="250dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="72dp"
-        android:text="¿Es correcto?"
+        android:layout_width="316dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="48dp"
+        android:text="Las rebeliones se basan en la...."
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -20,41 +22,65 @@
         android:id="@+id/button3"
         android:layout_width="117dp"
         android:layout_height="64dp"
-        android:layout_marginStart="252dp"
-        android:layout_marginBottom="104dp"
+        android:layout_marginStart="260dp"
+        android:layout_marginBottom="80dp"
         android:onClick="Siguiente"
         android:text="Siguiente pregunta"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <RadioGroup
-        android:layout_width="244dp"
-        android:layout_height="353dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="116dp"
+        android:layout_width="253dp"
+        android:layout_height="202dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.078">
 
         <RadioButton
-            android:id="@+id/radioButton5"
+            android:id="@+id/op_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="respuesta"
-            android:text="SI" />
+            android:text="resiliencia"
+            android:textColorHighlight="#673AB7"
+            android:textColorLink="#673AB7" />
 
         <RadioButton
-            android:id="@+id/radioButton6"
+            android:id="@+id/op_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="NO"
+            android:text="ira"
+            android:textColorHighlight="#673AB7"
+            android:textColorLink="#673AB7"
             tools:onClick="respuesta" />
 
         <RadioButton
-            android:id="@+id/radioButton7"
+            android:id="@+id/op_3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="respuesta"
-            android:text="puede" />
+            android:text="esperanza"
+            android:textColorHighlight="#673AB7"
+            android:textColorLink="#673AB7" />
+
+        <RadioButton
+            android:id="@+id/op_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="suerte"
+            android:textColorHighlight="#673AB7"
+            android:textColorLink="#673AB7" />
+
     </RadioGroup>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="349dp"
+        android:layout_height="252dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/image_p2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

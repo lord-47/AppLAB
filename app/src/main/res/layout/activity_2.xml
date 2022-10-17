@@ -18,22 +18,38 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="315dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="116dp"
-        android:text="¿Voy a ganar a Sofia a los bolos?"
+        android:id="@+id/question_1"
+        android:layout_width="318dp"
+        android:layout_height="102dp"
+        android:layout_marginTop="100dp"
+        android:text="¿A qué icónico villano de Batman interpreta Paul Dano en The Batman?"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/lista"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ListView
         android:id="@+id/lista"
-        android:layout_width="316dp"
-        android:layout_height="404dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="148dp"
+        android:layout_width="320dp"
+        android:layout_height="219dp"
+        android:layout_marginBottom="56dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.626"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="342dp"
+        android:layout_height="190dp"
+        app:layout_constraintBottom_toTopOf="@+id/lista"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/question_1"
+        app:layout_constraintVertical_bias="0.25"
+        app:srcCompat="@drawable/image_p1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

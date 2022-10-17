@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class P2 extends AppCompatActivity {
@@ -20,12 +22,12 @@ public class P2 extends AppCompatActivity {
     public void respuesta(View view) {
         boolean pulsado = ((Button) view ).isClickable();
         if(! Contestado && pulsado) {
-            if (view.getId() == R.id.radioButton5) {
+            if (view.getId() == R.id.op_3) {
                 Toast.makeText(this, "Correcto", Toast.LENGTH_SHORT).show();
                 Contestado = true;
             } else {
                 Contestado = true;
-                Toast.makeText(this, "Iicorrecto", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
             }
         }
     }
