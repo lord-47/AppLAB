@@ -1,9 +1,12 @@
 package com.example.intents;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -30,4 +33,10 @@ public class Resultado extends AppCompatActivity {
         else
             message.setText("No está mal");
     }
+
+    public void Siguiente(View view) {
+        Intent Volver = new Intent(this, P1.class);
+        startActivity(Volver);
+    }
+
 }
