@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#00BCD4"
     tools:context=".P4">
 
     <Button
@@ -30,10 +31,10 @@
         android:id="@+id/imageView2"
         android:layout_width="272dp"
         android:layout_height="359dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="24dp"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         app:srcCompat="@drawable/image_p4" />
@@ -42,10 +43,12 @@
         android:id="@+id/textView4"
         android:layout_width="218dp"
         android:layout_height="23dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="40dp"
         android:text="¿Quien es esta actriz?"
+        android:textColor="#000000"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

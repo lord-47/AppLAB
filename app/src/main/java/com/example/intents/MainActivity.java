@@ -16,8 +16,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ImageView image = findViewById(R.id.Imagen);
+        ImageView image2 = findViewById(R.id.Imagen2);
+        ImageView image3 = findViewById(R.id.Imagen3);
         Animation shakes = AnimationUtils.loadAnimation(this,R.anim.shake);
+
         image.startAnimation(shakes);
+        image2.startAnimation(shakes);
+        image3.startAnimation(shakes);
 
     }
     public void Siguiente(View view) {

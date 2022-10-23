@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#00BCD4"
     tools:context=".P5">
 
     <RadioGroup
@@ -19,6 +20,7 @@
             android:id="@+id/op_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:buttonTint="#000000"
             android:onClick="respuesta"
             android:text="Quentin Tarantino" />
 
@@ -26,6 +28,7 @@
             android:id="@+id/op_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:buttonTint="#000000"
             android:onClick="respuesta"
             android:text="Steven Spielberg" />
 
@@ -33,6 +36,7 @@
             android:id="@+id/radioButton7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:buttonTint="#000000"
             android:onClick="respuesta"
             android:text="Martin Scorsese" />
     </RadioGroup>
@@ -54,6 +58,7 @@
         android:layout_height="24dp"
         android:layout_marginTop="56dp"
         android:text="¿Quién es el director de Kill Bill?"
+        android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#00BCD4"
     tools:context=".MainActivity">
 
     <Button
@@ -28,7 +29,7 @@
         app:srcCompat="@drawable/pngwing_com" />
 
     <ImageView
-        android:id="@+id/imagen"
+        android:id="@+id/Imagen2"
         android:layout_width="111dp"
         android:layout_height="294dp"
         android:layout_marginStart="56dp"
@@ -39,7 +40,7 @@
         app:srcCompat="@drawable/pngwing_com" />
 
     <ImageView
-        android:id="@+id/imagen2"
+        android:id="@+id/Imagen3"
         android:layout_width="111dp"
         android:layout_height="294dp"
         android:layout_marginStart="248dp"

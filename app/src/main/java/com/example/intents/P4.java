@@ -40,6 +40,7 @@ public class P4 extends AppCompatActivity implements AdapterView.OnItemSelectedL
                 e.printStackTrace();
             }
             Intent Volver = new Intent(this, P5.class);
+            Volver.putExtra("puntuacion", contador);
             startActivity(Volver);
         }
         else{

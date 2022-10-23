@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#00BCD4"
     tools:context=".P2">
 
     <TextView
@@ -12,6 +13,7 @@
         android:layout_height="45dp"
         android:layout_marginTop="48dp"
         android:text="Las rebeliones se basan en la...."
+        android:textColor="#000000"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
@@ -25,7 +27,7 @@
         android:layout_marginStart="260dp"
         android:layout_marginBottom="80dp"
         android:onClick="Siguiente"
-        android:text="Siguiente pregunta"
+        android:text="Siguiente"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -42,8 +44,10 @@
             android:id="@+id/op_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:buttonTint="#000000"
             android:onClick="Respuesta"
             android:text="resiliencia"
+            android:textColor="#000000"
             android:textColorHighlight="#673AB7"
             android:textColorLink="#673AB7" />
 
@@ -51,15 +55,17 @@
             android:id="@+id/op_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:buttonTint="#000000"
+            android:onClick="Respuesta"
             android:text="ira"
             android:textColorHighlight="#673AB7"
-            android:textColorLink="#673AB7"
-            android:onClick="Respuesta" />
+            android:textColorLink="#673AB7" />
 
         <RadioButton
             android:id="@+id/op_3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:buttonTint="#000000"
             android:onClick="Respuesta"
             android:text="esperanza"
             android:textColorHighlight="#673AB7"
@@ -69,6 +75,7 @@
             android:id="@+id/op_4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:buttonTint="#000000"
             android:onClick="Respuesta"
             android:text="suerte"
             android:textColorHighlight="#673AB7"
