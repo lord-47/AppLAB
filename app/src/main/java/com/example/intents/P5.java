@@ -36,7 +36,7 @@ public class P5 extends AppCompatActivity {
     public void Siguiente(View view) {
         if (Contestado) {
             Intent Volver = new Intent(this, Resultado.class);
-            Volver.putExtra("puntuacion",contador);
+            Volver.putExtra("puntuacion", contador);
             startActivity(Volver);
         }
         else {
