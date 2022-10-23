@@ -26,8 +26,8 @@
             android:id="@+id/op_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Steven Spielberg"
-            tools:onClick="respuesta" />
+            android:onClick="respuesta"
+            android:text="Steven Spielberg" />
 
         <RadioButton
             android:id="@+id/radioButton7"

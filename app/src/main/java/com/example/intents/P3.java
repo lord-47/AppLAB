@@ -28,7 +28,7 @@ public class P3 extends AppCompatActivity {
                 contador=contador+3;
             } else {
                 Contestado = true;
-                contador=contador-1;
+                contador=contador-2;
                 Toast.makeText(this, "Incorrecto", Toast.LENGTH_SHORT).show();
             }
         }

@@ -52,7 +52,7 @@ public class P1 extends AppCompatActivity implements AdapterView.OnItemClickList
                 Contestado=true;
             } else {
                 Toast.makeText(this, "Respuesta incorrecta :(", Toast.LENGTH_LONG).show();
-                contador=contador-1;
+                contador=contador-2;
                 Contestado=true;
             }
         }

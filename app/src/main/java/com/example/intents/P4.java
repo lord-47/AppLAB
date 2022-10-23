@@ -44,7 +44,7 @@ public class P4 extends AppCompatActivity implements AdapterView.OnItemSelectedL
         }
         else{
             Toast.makeText(this, "Incorrecto", Toast.LENGTH_LONG).show();
-            contador =contador-1;
+            contador =contador-2;
             try {
                 Thread.sleep(1500);
             } catch (InterruptedException e) {
